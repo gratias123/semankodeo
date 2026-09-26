@@ -30,30 +30,38 @@ export const AboutSection: React.FC<AboutSectionProps> = () => {
         </div>
 
         {/* 2-Column Presentation */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Left Column: Portrait & Badge */}
-          <div className="lg:col-span-5 flex flex-col items-center">
-            <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-3xl bg-gradient-to-tr from-[#0B2545] via-[#1E293B] to-[#2563EB]/30 p-2 border border-[#3B82F6]/30 shadow-2xl">
-              <div className="w-full h-full rounded-2xl overflow-hidden bg-[#0B2545] flex items-center justify-center relative">
-                <img
-                  src={photoProfil}
-                  alt={PERSONAL_INFO.name}
-                  className="w-full h-full object-cover object-center filter drop-shadow-lg"
-                />
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+          {/* Left Column: Portrait Card & Professional Summary */}
+          <div className="lg:col-span-5 flex flex-col">
+            <div className="h-full flex flex-col justify-between bg-[#0B2545]/80 border border-[#3B82F6]/30 rounded-2xl p-6 sm:p-7 shadow-xl backdrop-blur-sm">
+              <div className="flex flex-col items-center">
+                {/* Photo Container with elegant framing & optimal height */}
+                <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[4/5] rounded-2xl bg-gradient-to-tr from-[#0F172A] via-[#1E293B] to-[#2563EB]/40 p-1.5 border border-[#3B82F6]/40 shadow-2xl overflow-hidden group">
+                  <div className="w-full h-full rounded-xl overflow-hidden bg-[#091E3A] relative">
+                    <img
+                      src={photoProfil}
+                      alt={PERSONAL_INFO.name}
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B2545]/80 via-transparent to-transparent opacity-60" />
+                  </div>
 
-              {/* Status floating badge */}
-              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#0B2545]/95 border border-[#3B82F6]/40 backdrop-blur-md px-4 py-1.5 rounded-full flex items-center gap-2 shadow-lg">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-xs font-semibold text-slate-200">Porto-Novo, Bénin</span>
-              </div>
-            </div>
+                  {/* Status floating badge */}
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#0B2545]/95 border border-[#3B82F6]/50 backdrop-blur-md px-3.5 py-1 rounded-full flex items-center gap-2 shadow-lg">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="text-[11px] font-semibold text-slate-200">Porto-Novo, Bénin</span>
+                  </div>
+                </div>
 
-            <div className="mt-8 text-center">
-              <h3 className="text-lg font-bold text-white">{PERSONAL_INFO.name}</h3>
-              <p className="text-xs text-[#60A5FA] font-medium mt-1">
-                Technicien Informatique · UI/UX Designer · Prompt Engineer
-              </p>
+                <div className="mt-5 text-center">
+                  <h3 className="text-xl font-display font-bold text-white tracking-tight">
+                    {PERSONAL_INFO.name}
+                  </h3>
+                  <p className="text-xs text-[#60A5FA] font-medium mt-1 font-mono">
+                    Technicien IMI · UI/UX Designer · Prompt Engineer
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
