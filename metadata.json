@@ -1,0 +1,8 @@
+{
+  "name": "Remix SEMAKO Déo-Gratias — Portfolio Professionnel",
+  "description": "Portfolio de SEMAKO Déo-Gratias : Technicien Informatique, UI/UX Designer et Prompt Engineer basé à Porto-Novo, Bénin.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
