@@ -27,8 +27,7 @@ export const Footer: React.FC<FooterProps> = () => {
             </div>
             
             <p className="text-xs sm:text-sm text-slate-400 max-w-lg leading-relaxed">
-              Technicien Informatique (IMI 3 ans), UI/UX Designer et Prompt Engineer.
-              Basé à Porto-Novo, Bénin. Disponible pour opportunités, missions web, design d'interfaces et intégration d'IA.
+              Technicien Informatique, UI/UX Designer et Prompt Engineer. Basé à Porto-Novo, Bénin. Disponible pour opportunités, missions web, design d'interfaces et intégration d'IA.
             </p>
 
             <div className="flex items-center gap-3 pt-2">
@@ -96,7 +95,14 @@ export const Footer: React.FC<FooterProps> = () => {
               </li>
               <li className="flex items-start gap-2">
                 <Globe className="w-3.5 h-3.5 text-[#3B82F6] shrink-0 mt-0.5" />
-                <span className="font-mono text-slate-400">Wiki: {PERSONAL_INFO.wikimediaUsername}</span>
+                <a
+                  href={PERSONAL_INFO.wikimediaUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-slate-400 hover:text-white hover:underline transition-colors"
+                >
+                  Wiki: {PERSONAL_INFO.wikimediaUsername}
+                </a>
               </li>
             </ul>
           </div>

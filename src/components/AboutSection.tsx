@@ -1,34 +1,13 @@
 import React from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import { Award, Compass, UserCheck } from 'lucide-react';
-import photoProfil from '../assets/images/photo.png';
+import { Compass, UserCheck } from 'lucide-react';
+import photoProfil from '../assets/images/regenerated_image_1790438942219.jpg';
 
 interface AboutSectionProps {
   onOpenCv?: () => void;
 }
 
 export const AboutSection: React.FC<AboutSectionProps> = () => {
-  const milestones = [
-    {
-      year: "3 Ans",
-      title: "Formation IMI",
-      place: "Lycée Technique et Professionnel de Porto-Novo",
-      desc: "Installations et Maintenance en Informatique (architecture PC, réseaux, OS, micro-électronique)."
-    },
-    {
-      year: "2023",
-      title: "Brevet d'Études du Premier Cycle (BEPC)",
-      place: "Lycée Behanzin",
-      desc: "Base académique solide et rigueur de raisonnement."
-    },
-    {
-      year: "Actif",
-      title: "Contributeur Wikimedia Commons",
-      place: "Semako64",
-      desc: "Photographies documentaires et partage libre du patrimoine béninois."
-    }
-  ];
-
   return (
     <section id="a-propos" className="py-20 md:py-28 bg-[#0F172A] relative overflow-hidden border-t border-[#3B82F6]/20">
       {/* Decorative background glows */}
@@ -51,7 +30,7 @@ export const AboutSection: React.FC<AboutSectionProps> = () => {
         </div>
 
         {/* 2-Column Presentation */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Column: Portrait & Badge */}
           <div className="lg:col-span-5 flex flex-col items-center">
             <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-3xl bg-gradient-to-tr from-[#0B2545] via-[#1E293B] to-[#2563EB]/30 p-2 border border-[#3B82F6]/30 shadow-2xl">
@@ -59,7 +38,7 @@ export const AboutSection: React.FC<AboutSectionProps> = () => {
                 <img
                   src={photoProfil}
                   alt={PERSONAL_INFO.name}
-                  className="w-full h-full object-contain filter drop-shadow-lg"
+                  className="w-full h-full object-cover object-center filter drop-shadow-lg"
                 />
               </div>
 
@@ -92,28 +71,6 @@ export const AboutSection: React.FC<AboutSectionProps> = () => {
                 Parallèlement, ma sensibilité esthétique et ergonomique m'a conduit vers le <strong>Design Graphique et l'UI/UX</strong>, complété par la pratique du développement frontend moderne. Aujourd'hui, j'y intègre le <strong>Prompt Engineering</strong> pour orchestrer des workflows avec les modèles d'IA générative et livrer des résultats reproductibles et mesurables.
               </p>
             </div>
-          </div>
-        </div>
-
-        {/* Timeline / Milestones */}
-        <div className="bg-[#0B2545]/60 border border-[#3B82F6]/20 rounded-2xl p-6 sm:p-8">
-          <h3 className="text-base sm:text-lg font-bold text-white mb-6 flex items-center gap-2">
-            <Award className="w-5 h-5 text-[#3B82F6]" />
-            <span>Repères & Diplômes</span>
-          </h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
-            {milestones.map((m, idx) => (
-              <div key={idx} className="relative pl-6 border-l-2 border-[#2563EB]/60">
-                <span className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#2563EB] border-2 border-[#0F172A]" />
-                <span className="text-[11px] font-mono font-bold text-[#60A5FA] uppercase tracking-wider">
-                  {m.year}
-                </span>
-                <h4 className="text-sm font-bold text-white mt-1">{m.title}</h4>
-                <p className="text-xs text-slate-400 mt-0.5">{m.place}</p>
-                <p className="text-xs text-slate-300 mt-2 leading-relaxed">{m.desc}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>

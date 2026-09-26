@@ -1,11 +1,11 @@
 import React from 'react';
-import { ArrowUpRight, Cpu, Smartphone, Palette, Terminal, Code2 } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 import imgInformatique from '../assets/images/regenerated_image_1790423095743.png';
 import imgGsm from '../assets/images/competence_gsm_1790422421313.jpg';
-import imgDesign from '../assets/images/competence_design_1790422432943.jpg';
-import imgPrompt from '../assets/images/competence_prompt_1790422443032.jpg';
-import imgWebDev from '../assets/images/competence_web_dev_1790422453876.jpg';
+import imgDesign from '../assets/images/design_workspace_1790453934058.jpg';
+import imgPrompt from '../assets/images/prompt_ai_workspace_1790453947201.jpg';
+import imgWebDev from '../assets/images/web_dev_workspace_1790454073419.jpg';
 
 interface DomainsSectionProps {
   onSelectCategory: (cat: 'web' | 'ai' | 'design' | 'hardware') => void;
@@ -18,50 +18,40 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onSelectCategory
       title: "Informatique & Maintenance",
       description: "Diagnostic méthodique matériel et logiciel, maintenance préventive et curative de parcs informatiques, dépannage de composants, assemblage et optimisation de performances.",
       image: imgInformatique,
-      icon: Cpu,
       targetCategory: 'hardware' as const,
-      colSpan: 'lg:col-span-2',
-      badge: "HARDWARE & SYSTÈMES"
+      colSpan: 'lg:col-span-2'
     },
     {
       number: "02",
       title: "Maintenance GSM",
       description: "Réparation minutieuse de smartphones et tablettes, micro-soudure sur cartes mères, remplacement de circuits et écrans, flashage de firmwares et désoxydation.",
       image: imgGsm,
-      icon: Smartphone,
       targetCategory: 'hardware' as const,
-      colSpan: 'lg:col-span-2',
-      badge: "MICRO-SOUDURE & MOBILES"
+      colSpan: 'lg:col-span-2'
     },
     {
       number: "03",
       title: "Design Graphique",
       description: "Création d'identités visuelles percutantes, logos, maquettes UI/UX sous Figma, supports visuels numériques et respect rigoureux des chartes graphiques modernes.",
       image: imgDesign,
-      icon: Palette,
       targetCategory: 'design' as const,
-      colSpan: 'lg:col-span-2',
-      badge: "UI/UX & DIRECTION ARTISTIQUE"
+      colSpan: 'lg:col-span-2'
     },
     {
       number: "04",
       title: "Prompt Engineering",
       description: "Conception de prompts avancés et structurés, calibrage de modèles d'IA générative (ChatGPT, Claude, Gemini), automatisation de workflows et intégration de logique IA.",
       image: imgPrompt,
-      icon: Terminal,
       targetCategory: 'ai' as const,
-      colSpan: 'lg:col-span-3',
-      badge: "IA GÉNÉRATIVE & AUTOMATISATION"
+      colSpan: 'lg:col-span-3'
     },
     {
       number: "05",
       title: "Dev Web & App",
       description: "Développement d'applications web et mobiles réactives, intégration moderne avec React, TypeScript et Tailwind CSS, architecture fluide et conception d'expériences connectées.",
       image: imgWebDev,
-      icon: Code2,
       targetCategory: 'web' as const,
-      colSpan: 'lg:col-span-3',
-      badge: "FRONT-END & APPLICATIONS"
+      colSpan: 'lg:col-span-3'
     }
   ];
 
@@ -91,8 +81,6 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onSelectCategory
         {/* Grille des 5 Compétences — Cadres façon carrée aux bords (rounded-none) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-8">
           {competences.map((item) => {
-            const Icon = item.icon;
-
             return (
               <div
                 key={item.number}
@@ -113,17 +101,6 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onSelectCategory
                   />
                   {/* Subtle dark gradient overlay on image */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0B2545] via-transparent to-black/30 pointer-events-none" />
-
-                  {/* Badge thématique au bord carré */}
-                  <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 bg-[#0F172A]/90 backdrop-blur-md border border-[#3B82F6]/50 text-[#93C5FD] text-[10px] font-mono font-bold tracking-wider rounded-none shadow-md">
-                    <Icon className="w-3.5 h-3.5 text-[#60A5FA]" />
-                    <span>{item.badge}</span>
-                  </div>
-
-                  {/* Numéro carré en haut à droite */}
-                  <div className="absolute top-3 right-3 w-8 h-8 bg-[#0F172A]/90 backdrop-blur-md border border-slate-700/80 group-hover:border-[#3B82F6] flex items-center justify-center font-mono text-xs font-bold text-slate-300 group-hover:text-white rounded-none transition-colors">
-                    {item.number}
-                  </div>
                 </div>
 
                 {/* 2. CONTENU TEXTUEL & TITRE */}

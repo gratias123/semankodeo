@@ -13,9 +13,11 @@ import { ProjectsSection } from './components/ProjectsSection';
 import { WikimediaSection } from './components/WikimediaSection';
 import { FaqSection } from './components/FaqSection';
 import { AboutSection } from './components/AboutSection';
+import { DifferentiatorsSection } from './components/DifferentiatorsSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { CvModal } from './components/CvModal';
+import { ScrollReveal } from './components/ScrollReveal';
 
 export default function App() {
   const [cvModalOpen, setCvModalOpen] = useState(false);
@@ -35,34 +37,53 @@ export default function App() {
         <MarqueeTicker />
 
         {/* 03 — 3 Pôles d'expertise (Technique & GSM, UI/UX, Prompt Engineering) */}
-        <DomainsSection
-          onSelectCategory={(cat) => {
-            setSelectedCategory(cat);
-            const el = document.getElementById('realisations');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }}
-        />
+        <ScrollReveal delay={0.05}>
+          <DomainsSection
+            onSelectCategory={(cat) => {
+              setSelectedCategory(cat);
+              const el = document.getElementById('realisations');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
+          />
+        </ScrollReveal>
 
         {/* 04 — Outils & Équipements (4 primary tools + "Voir plus" expander) */}
-        <ToolsSection />
+        <ScrollReveal delay={0.05}>
+          <ToolsSection />
+        </ScrollReveal>
 
         {/* 09 — Réalisations & Projets réels avec Modale de détails */}
-        <ProjectsSection
-          selectedCategory={selectedCategory}
-          onCategoryChange={setSelectedCategory}
-        />
+        <ScrollReveal delay={0.05}>
+          <ProjectsSection
+            selectedCategory={selectedCategory}
+            onCategoryChange={setSelectedCategory}
+          />
+        </ScrollReveal>
 
         {/* Wikimedia Commons Showcase (Semako64) */}
-        <WikimediaSection />
+        <ScrollReveal delay={0.05}>
+          <WikimediaSection />
+        </ScrollReveal>
 
-        {/* Section À Propos (Parcours, vision, repères) */}
-        <AboutSection onOpenCv={() => setCvModalOpen(true)} />
+        {/* Section À Propos (Parcours, vision) */}
+        <ScrollReveal delay={0.05}>
+          <AboutSection onOpenCv={() => setCvModalOpen(true)} />
+        </ScrollReveal>
 
-        {/* FAQ Section (Questions fréquentes) positionnée après À Propos */}
-        <FaqSection />
+        {/* Section Ce qui me différencie (Approche, valeur ajoutée & courbe S) */}
+        <ScrollReveal delay={0.05}>
+          <DifferentiatorsSection />
+        </ScrollReveal>
+
+        {/* FAQ Section (Questions fréquentes) positionnée après Ce qui me différencie */}
+        <ScrollReveal delay={0.05}>
+          <FaqSection />
+        </ScrollReveal>
 
         {/* 11 — Contact direct & Appel à l'action */}
-        <ContactSection onOpenCv={() => setCvModalOpen(true)} />
+        <ScrollReveal delay={0.05}>
+          <ContactSection onOpenCv={() => setCvModalOpen(true)} />
+        </ScrollReveal>
       </main>
 
       {/* 12 — Footer en Bleu Nuit */}
