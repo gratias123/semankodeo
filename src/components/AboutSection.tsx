@@ -59,17 +59,36 @@ export const AboutSection: React.FC<AboutSectionProps> = () => {
 
           {/* Right Column: Bio Narrative */}
           <div className="lg:col-span-7 space-y-5">
-            <div className="bg-[#0B2545]/80 border border-[#3B82F6]/25 rounded-2xl p-6 sm:p-8 backdrop-blur-sm">
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 flex items-center gap-2">
+            <div className="bg-[#0B2545]/80 border border-[#3B82F6]/30 rounded-2xl p-6 sm:p-8 backdrop-blur-sm shadow-xl">
+              <h3 className="text-xl sm:text-2xl font-display font-bold text-white mb-5 flex items-center gap-2.5">
                 <UserCheck className="w-5 h-5 text-[#3B82F6]" />
-                <span>Mon Parcours & Philosophie</span>
+                <span>Mon parcours & ma philosophie</span>
               </h3>
-              <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                Passionné d'informatique dès le plus jeune âge, j'ai suivi un cursus technique complet de <strong>3 ans en Installations et Maintenance Informatique (IMI)</strong> au Lycée Technique et Professionnel de Porto-Novo. Cette formation rigoureuse m'a inculqué les fondamentaux du matériel, de l'électronique de précision, des systèmes d'exploitation et des architectures réseau.
-              </p>
-              <p className="text-sm sm:text-base text-slate-300 leading-relaxed mt-3">
-                Parallèlement, ma sensibilité esthétique et ergonomique m'a conduit vers le <strong>Design Graphique et l'UI/UX</strong>, complété par la pratique du développement frontend moderne. Aujourd'hui, j'y intègre le <strong>Prompt Engineering</strong> pour orchestrer des workflows avec les modèles d'IA générative et livrer des résultats reproductibles et mesurables.
-              </p>
+
+              <div className="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed font-sans">
+                <p>
+                  Mon parcours s’est construit progressivement autour de l’informatique, du design et des nouvelles technologies.
+                </p>
+
+                <p>
+                  Après l’obtention de mon <strong className="text-white font-semibold">BEPC</strong>, j’ai poursuivi mes études au <strong className="text-white font-semibold">Lycée Technique et Professionnel de Porto-Novo</strong>, où je suis rentré pour un cursus de <strong className="text-[#60A5FA] font-semibold">3 ans en Installations et Maintenance en Informatique (IMI)</strong>. Cette formation m’a permis de développer une compréhension concrète de l’environnement informatique et de renforcer mon intérêt pour les technologies numériques.
+                </p>
+
+                <p>
+                  Au fil de mon parcours, je me suis également orienté vers le <strong className="text-white font-semibold">design graphique et l’UI/UX</strong>, des domaines qui correspondent à mon intérêt pour la création, la conception visuelle et l’expérience utilisateur. Cette évolution m’a naturellement amené à explorer davantage les outils numériques et le développement web.
+                </p>
+
+                <p>
+                  Plus récemment, le <strong className="text-[#60A5FA] font-semibold">Prompt Engineering et l’intelligence artificielle</strong> sont venus compléter cette orientation. Je m’intéresse particulièrement à la manière dont ces technologies peuvent être utilisées pour améliorer la création, organiser le travail et transformer plus efficacement une idée en résultat concret.
+                </p>
+
+                <div className="pt-4 mt-4 border-t border-slate-700/80">
+                  <p className="text-white font-medium text-sm sm:text-base bg-[#0F172A]/70 p-4 rounded-xl border border-[#3B82F6]/30">
+                    <span className="text-[#60A5FA] font-bold block mb-1">Cap & Ambition</span>
+                    « Mon objectif est de continuer à construire un profil polyvalent, à la croisée de la technique, de la création et des technologies numériques. »
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
