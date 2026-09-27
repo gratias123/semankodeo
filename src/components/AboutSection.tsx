@@ -58,7 +58,7 @@ export const AboutSection: React.FC<AboutSectionProps> = () => {
                     {PERSONAL_INFO.name}
                   </h3>
                   <p className="text-xs text-[#60A5FA] font-medium mt-1 font-mono">
-                    Technicien IMI · UI/UX Designer · Prompt Engineer
+                    Technicien Informatique · UI/UX Designer · Prompt Engineer
                   </p>
                 </div>
               </div>
